@@ -9,15 +9,22 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>Mirim</b> Webzine</a>
+   <div> <button class="w3-button w3-teal w3-large" onclick="w3_open()">☰</button>
+     <b>Mirim</b> Webzine</div>
     <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#projects" class="w3-bar-item w3-button">Webzine</a>
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#Last Issue" class="w3-bar-item w3-button">Last Issue</a>
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+        <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button">Webzine</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+        <a href="#Last Issue" onclick="w3_close()" class="w3-bar-item w3-button">Last Issue</a>
     </div>
   </div>
 </div>
+<script>
+    function w3_open() {document.getElementById("mySidebar").style.display = "block";}
+    function w3_close() {document.getElementById("mySidebar").style.display = "none";}
+</script>
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
@@ -36,61 +43,28 @@
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Webzine</h3>
   </div>
 
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <a href="article1.html" class="w3-bar-item w3-button">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-blue w3-padding">기사1</div>
-        <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/21731866_1350026728441018_7019650123883403654_o.jpg?_nc_cat=0&oh=109dd6e4fde298584caef275afbc5b60&oe=5B92CC92" alt="House" style="width:100%">
-      </div></a>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-        <a href="article2.html" class="w3-bar-item w3-button">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">기사2</div>
-        <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/21731866_1350026728441018_7019650123883403654_o.jpg?_nc_cat=0&oh=109dd6e4fde298584caef275afbc5b60&oe=5B92CC92" alt="House" style="width:100%">
-      </div></a>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">기사3</div>
-        <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/21731866_1350026728441018_7019650123883403654_o.jpg?_nc_cat=0&oh=109dd6e4fde298584caef275afbc5b60&oe=5B92CC92" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">기사4</div>
-        <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/21731866_1350026728441018_7019650123883403654_o.jpg?_nc_cat=0&oh=109dd6e4fde298584caef275afbc5b60&oe=5B92CC92" alt="House" style="width:100%">
-      </div>
-    </div>
-  </div>
+  <div class="w3-content w3-display-container">
+      <img class="mySlides" src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/16586999_1103609919749368_6126899279534447507_o.jpg?_nc_cat=0&oh=e4c45d1788b96ff62f974a972acae9bb&oe=5B894F63" style="width:100%">
+      <img class="mySlides" src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/16707462_1103609816416045_636650901022641459_o.jpg?_nc_cat=0&oh=ddc5515df708f054c738a0f7133ae52b&oe=5B847F2B" style="width:100%">
+      <img class="mySlides" src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/16716250_1103609736416053_1438208270387205349_o.jpg?_nc_cat=0&oh=2c1696b3e57555f0f2b90d1dc87749ad&oe=5B9BDBE4" style="width:100%">
+      <img class="mySlides" src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/16665334_1103609619749398_2055733546853990048_o.jpg?_nc_cat=0&oh=0da7f85078484893a229bc78ae9ca172&oe=5B81008F" style="width:100%">
 
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">기사5</div>
-        <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/21731866_1350026728441018_7019650123883403654_o.jpg?_nc_cat=0&oh=109dd6e4fde298584caef275afbc5b60&oe=5B92CC92" alt="House" style="width:99%">
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">기사6</div>
-        <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/21731866_1350026728441018_7019650123883403654_o.jpg?_nc_cat=0&oh=109dd6e4fde298584caef275afbc5b60&oe=5B92CC92" alt="House" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">기사7</div>
-        <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/21731866_1350026728441018_7019650123883403654_o.jpg?_nc_cat=0&oh=109dd6e4fde298584caef275afbc5b60&oe=5B92CC92" alt="House" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">기사8</div>
-        <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/21731866_1350026728441018_7019650123883403654_o.jpg?_nc_cat=0&oh=109dd6e4fde298584caef275afbc5b60&oe=5B92CC92" alt="House" style="width:99%">
-      </div>
-    </div>
-  </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    function plusDivs(n) { showDivs(slideIndex += n); }
+    function showDivs(n) { var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";}
+        x[slideIndex-1].style.display = "block";}
+    </script>
 
   <!-- About Section -->
   <div class="w3-container w3-padding-32" id="about">
@@ -100,33 +74,109 @@
   </div>
 
   <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
       <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-1/31946022_736280333429128_248353666392653824_n.jpg?_nc_cat=0&oh=44f5e867cb4ec76ac4fecd1e5b086f4c&oe=5B9537EA" alt="John" style="width:100%">
-      <h3>김미뇽</h3>
+      <h3>김 미 뇽</h3>
       <p class="w3-opacity">3학년짱</p>
       <p>3-2반 랩퍼 출신 웹진짱 LG를 좋아함</p>
-
     </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
       <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/31957145_2003070006677218_7158511194418970624_n.jpg?_nc_cat=0&oh=0a3c30bcc156c76af9f08f462296b389&oe=5B8756CE" alt="Jane" style="width:100%">
       <h3>조 현 진</h3>
       <p class="w3-opacity">3학년부짱</p>
       <p>솔루션과 3학년 부짱 볼링과 당구를 짱 좋아함</p>
-
     </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/31925009_598405457208980_9223276362163290112_n.jpg?_nc_cat=0&_nc_eui2=AeGMTp9XwpBFJf6yoF8i1ZNrdrOl_I_yWqTt4p8n0qJljLCuLm6fc0rm7CMf9LGP97QY5nxsUckTGb7PmNiR3R20jHqwGP8Hm-raXdL0adwPfg&oh=84783a11bcee64925ae12020a7b16f32&oe=5B8E0E64" alt="Jane" style="width:100%">
+      <h3>오 아 름</h3>
+      <p class="w3-opacity">3학년부짱</p>
+      <p>사실 학생회</p>
+    </div>
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-1/c282.0.960.960/p960x960/1402926_10150004552801901_469209496895221757_o.jpg?_nc_cat=0&oh=8d0cb5a9800aafcb617ef200f8e20b38&oe=5B82626A" alt="Jane" style="width:100%">
+      <h3>변 주 원</h3>
+      <p class="w3-opacity">디자인</p>
+      <p>프사가 없어</p>
+    </div>
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/31944695_2565241437033337_6847020203105058816_n.jpg?_nc_cat=0&_nc_eui2=AeEf7Q_FJ-RAPLNPWjFZy-Ilhvr70eqc7aPE2xOfc4TIs6wSwowUZVIkT3OtVMlJDriQE9S6sNfeHlgx9IliDdXJrQ2V8SJCxMC0iKMra-pXOQ&oh=dd65d76ea5e20b0e55661edc861da76e&oe=5B8C4D2E" alt="Dan" style="width:100%">
+      <h3>박 지 선</h3>
+      <p class="w3-opacity">디자인</p>
+      <p> 우 렁 이 </p>
+    </div>
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/31841613_576534282719923_3398503360993689600_n.jpg?_nc_cat=0&_nc_eui2=AeGin4HfZnv1Lpczp7b7bosgpTcTMxY8F0f6UoQcUvGe3DI6WJzcyDflrCB3eOO32Eh58eT776wf67f25vPVUQ2ErxCmTHVZ-Trzh2Mcv2hIkA&oh=4ad5d4add7f11569321297aad05f2616&oe=5B83A72E" alt="Dan" style="width:100%">
+      <h3>김 우 정</h3>
+      <p class="w3-opacity">디자인</p>
+      <p>  </p>
+    </div></div>
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
       <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/31388170_618969688444171_9171872032013613326_n.jpg?_nc_cat=0&oh=6754d972a0187ef5b376df02e712a250&oe=5B890843" alt="Mike" style="width:100%">
       <h3>이 지 현</h3>
       <p class="w3-opacity">2학년짱</p>
       <p>솔루션과 2학년 짱</p>
-
     </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
       <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/30724789_2229560987317377_5058654103756865536_n.jpg?_nc_cat=0&oh=52113a9558f688e4f698a7d514c1934c&oe=5B500B21" alt="Dan" style="width:100%">
       <h3>조 채 연</h3>
       <p class="w3-opacity">2학년부짱</p>
-      <p>디자인과 미림 2학년 부짱 </p>
-
+      <p> 짜르 앨범 디자이너 </p>
+    </div>
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/31498636_2077694989115428_3481401357997441024_n.jpg?_nc_cat=0&_nc_eui2=AeGhrLvMmZtMQYon_r5zoCwFxti4bUG52OeTuBNZE80hcQ6m-8at9mCr2Gxebo8U5e1VokVBllkb1ynKRZ-i_pAkpcnAu1k7zc8S8JJwEHLlIQ&oh=9c68b09a5292b89f85c5a9dc74e1c07b&oe=5B8FB30F" alt="Dan" style="width:100%">
+      <h3>장 하 림</h3>
+      <p class="w3-opacity">디자인</p>
+      <p> 웹진 외모 담당 </p>
+    </div>
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-1/c0.0.958.958/30515675_611218682547856_1588116781785454095_n.jpg?_nc_cat=0&_nc_eui2=AeG869zZ7A5Zfi9BeEGuJ4F4TBNaBHRicHaDlAGswgTh8lE-4dM4bU3hRAFqhbPaZ9LYFm4vaqktJyrRhSgp3oFfUrp738QZzaMsEq5Ixh0C6g&oh=542a4f66ed1a29576aa6c1f52df85e46&oe=5B8C8743" alt="Dan" style="width:100%">
+      <h3>이 규 빈</h3>
+      <p class="w3-opacity">인미과</p>
+      <p>웹진 두뇌 담당</p>
+    </div>
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-1/c282.0.960.960/p960x960/1402926_10150004552801901_469209496895221757_o.jpg?_nc_cat=0&_nc_eui2=AeEXM_4YWAHucwfxvQ4CKLBSeHVvUmX8agcRmf-cekvnhnlnjZ7i9X6eBMb3jPP-nE19ITaXnhzvup9ix2L6OOImi78-DGj7sp8Bdr0P_ofxIA&oh=6d491ed8675b06afaed0e2a712bb8d4a&oe=5B82626A" alt="Dan" style="width:100%">
+      <h3>이 재 은</h3>
+      <p class="w3-opacity">인미과</p>
+      <p>웹진 귀요미</p>
+    </div></div>
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/29258042_763130300543554_444857620004601856_n.jpg?_nc_cat=0&_nc_eui2=AeF3RXDVGXm2p31zt4lKbQ838e-ZOHp3Sia7Iz5nQli8R2USPh9U_6b5UKe2xjdQW5yF3WKQCDRAvdddj0Ci-0idRZoQj75NqE9e80rldusxXA&oh=afd2aa1a0898a02c584bb60aa5d09a40&oe=5B96BF06" alt="Dan" style="width:100%">
+      <h3>곽 가 연</h3>
+      <p class="w3-opacity">1학년짱</p>
+      <p> 나랑 페북 친구 아님 </p>
+    </div>
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-1/c282.0.960.960/p960x960/1402926_10150004552801901_469209496895221757_o.jpg?_nc_cat=0&oh=8d0cb5a9800aafcb617ef200f8e20b38&oe=5B82626A" alt="Dan" style="width:100%">
+      <h3>고 가 은</h3>
+      <p class="w3-opacity">1학년부짱</p>
+      <p> 자기소개 </p>
+    </div>
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-1/c282.0.960.960/p960x960/1402926_10150004552801901_469209496895221757_o.jpg?_nc_cat=0&oh=8d0cb5a9800aafcb617ef200f8e20b38&oe=5B82626A" alt="Dan" style="width:100%">
+      <h3>신 하 늘</h3>
+      <p class="w3-opacity">소프트웨어</p>
+      <p>자기소개</p>
+    </div>
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-1/p960x960/32089304_2103469929929608_1099162335265685504_o.jpg?_nc_cat=0&oh=af419dbe92f6b91cecef15f4d068c0da&oe=5B979AA1" alt="Dan" style="width:100%">
+      <h3>문 혜 경</h3>
+      <p class="w3-opacity">웹솔루션</p>
+      <p>자기소개</p>
+    </div>
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-1/c282.0.960.960/p960x960/1402926_10150004552801901_469209496895221757_o.jpg?_nc_cat=0&oh=8d0cb5a9800aafcb617ef200f8e20b38&oe=5B82626A" alt="Dan" style="width:100%">
+      <h3>소 예 진</h3>
+      <p class="w3-opacity">디자인</p>
+      <p>자기소개</p>
+    </div>
+    <div class="w3-col l2 m6 s11 w3-margin-bottom">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/28471551_107579713410657_5081662827831783436_n.jpg?_nc_cat=0&oh=8931f5730960ab99dc8ea4606e933005&oe=5B91F02C" alt="Dan" style="width:100%">
+      <h3>하 나 랑</h3>
+      <p class="w3-opacity">디자인</p>
+      <p>자기소개</p>
     </div>
   </div>
 
@@ -135,16 +185,43 @@
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Last Issue</h3>
     <p>지난 호 웹진은 이곳에서</p>
     <div class="w3-row-padding">
-      <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-col l2 m6 w3-margin-bottom">
         <a href="last.html" class="w3-bar-item w3-button">
         <div class="w3-display-container">
-          <div class="w3-display-topleft w3-red w3-padding">17년 가을호</div>
-          <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/21731866_1350026728441018_7019650123883403654_o.jpg?_nc_cat=0&oh=109dd6e4fde298584caef275afbc5b60&oe=5B92CC92" alt="House" style="width:100%">
+          <div class="w3-display-topleft w3-red w3-padding">17년 23호</div>
+          <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/32325279_1616533571790331_9018097334822633472_o.jpg?_nc_cat=0&oh=29b5d3f25e2ba6c5b26fa1a09f605fa5&oe=5B9D7F35" alt="House" style="width:100%">
         </div></a>
       </div>
-      </button>
-    </form>
-  </div>
+      <div class="w3-col l2 m6 w3-margin-bottom">
+        <a href="https://www.e-mirim.hs.kr/renewal/ebook/webzine/webzine022/webzine_22.html" class="w3-bar-item w3-button">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-red w3-padding">16년 22호</div>
+          <img src="22.gif" alt="House" style="width:100%">
+        </div></a>
+      </div>
+      <div class="w3-col l2 m6 w3-margin-bottom">
+        <a href="https://www.e-mirim.hs.kr/renewal/ebook/webzine/webzine021/webzine_21.html" class="w3-bar-item w3-button">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-red w3-padding">16년 21호</div>
+          <img src="21.gif" alt="House" style="width:100%">
+        </div></a>
+      </div>
+      <div class="w3-col l2 m6 w3-margin-bottom">
+        <a href="https://www.e-mirim.hs.kr/renewal/ebook/webzine/webzine020/webzine_20.html" class="w3-bar-item w3-button">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-red w3-padding">15년 20호</div>
+          <img src="20.gif" alt="House" style="width:100%">
+        </div></a>
+      </div>
+      <div class="w3-col l2 m6 w3-margin-bottom">
+        <a href="https://www.e-mirim.hs.kr/renewal/ebook/webzine/webzine%20019/webzine%20019.html" class="w3-bar-item w3-button">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-red w3-padding">15년 19호</div>
+          <img src="19.gif" alt="House" style="width:100%">
+        </div></a>
+      </div>
+
+    </div>
 
 <!-- End page content -->
 </div>
@@ -153,8 +230,8 @@
 <div id="googleMap" class="w3-grayscale" style="width:100%;height:450px;"></div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Create by <a href="https://www.e-mirim.hs.kr/renewal/main.jsp" title="W3.CSS" target="_blank" class="w3-hover-text-green">mirim</a></p>
+<footer class="w3-center w3-white w3-padding-16">
+  <p><b>Create by <a href="https://www.e-mirim.hs.kr/renewal/main.jsp" title="W3.CSS" target="_blank" class="w3-hover-text-green">mirim</a></b></p>
 </footer>
 
 

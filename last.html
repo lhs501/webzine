@@ -9,37 +9,49 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>Mirim</b> Webzine</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-     <a href="webzine.html" class="w3-bar-item w3-button">Home</a>
-      <a href="last.html" class="w3-bar-item w3-button">기사1</a>
-       <a href="article2.html" class="w3-bar-item w3-button">기사2</a>
-        <a href="Article2.html" class="w3-bar-item w3-button">기사3</a>
-          <a href="Article2.html" class="w3-bar-item w3-button">기사4</a>
-            <a href="Article2.html" class="w3-bar-item w3-button">기사5</a>
+    <button class="w3-button w3-teal w3-large" onclick="w3_open()">☰</button><b> Mirim</b> Webzine</a></div>
 
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <a href="webzine.html" class="w3-bar-item w3-button">HOME</a>
+        <a href="last.html" class="w3-bar-item w3-button">17년 23호</a>
+        <a href="https://www.e-mirim.hs.kr/renewal/ebook/webzine/webzine022/webzine_22.html" class="w3-bar-item w3-button">16년 22호</a>
+        <a href="https://www.e-mirim.hs.kr/renewal/ebook/webzine/webzine021/webzine_21.html" class="w3-bar-item w3-button">16년 21호</a>
+        <a href="https://www.e-mirim.hs.kr/renewal/ebook/webzine/webzine020/webzine_20.html" class="w3-bar-item w3-button">15년 20호</a>
+        <a href="https://www.e-mirim.hs.kr/renewal/ebook/webzine/webzine%20019/webzine%20019.html" class="w3-bar-item w3-button">15년 19호</a>
     </div>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="last1.gif"
-  alt="Architecture" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <!-- <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Mirim</b></span> <span class="w3-hide-small w3-text-light-grey">Webzine</span></h1> -->
-  </div>
-</header>
 
 
+<!-- slide show -->
+    <div class="w3-content w3-display-container">
+        <img class="mySlides" src="2017_1.gif" style="width:100%">
+        <img class="mySlides" src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/32489708_1616532318457123_8380884746858659840_o.jpg?_nc_cat=0&oh=e22b5420c913484c000ded00f47577cb&oe=5B802507" style="width:100%">
+        <img class="mySlides" src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/21731866_1350026728441018_7019650123883403654_o.jpg?_nc_cat=0&oh=109dd6e4fde298584caef275afbc5b60&oe=5B92CC92" style="width:100%">
+        <img class="mySlides" src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/20861901_1325112587599099_1784741219760177546_o.jpg?_nc_cat=0&oh=dd4ccf3955868fb114771287e155d3aa&oe=5B8A2E01" style="width:100%">
 
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        function plusDivs(n) { showDivs(slideIndex += n); }
+        function showDivs(n) { var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";}
+            x[slideIndex-1].style.display = "block";}
+         function w3_open() {document.getElementById("mySidebar").style.display = "block";}
+         function w3_close() {document.getElementById("mySidebar").style.display = "none";}
+    </script>
+    <script>
+
+    </script>
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
   <p>Create by <a href="https://www.e-mirim.hs.kr/renewal/main.jsp" title="W3.CSS" target="_blank" class="w3-hover-text-green">mirim</a></p>
 </footer>
-
-
-
 </body>
 </html>
